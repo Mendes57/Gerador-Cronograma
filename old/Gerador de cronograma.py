@@ -1,3 +1,5 @@
+#Antigo estilo de cronograma, era feito baseado em cronogramas antigos
+
 from static.funcoes.limpatela import clear
 lugar = None
 nome_totem = None
