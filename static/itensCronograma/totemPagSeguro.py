@@ -1,5 +1,5 @@
 from static.funcoes.coletaDados import dadosCliente
-def pagseguro():
+def totemPagSeguro():
     return [["*PagSeguro e Servidor:*"],
             [f"Adquirir Servidor - Configuração mínima: Intel core i5 8ª geração, 8GB RAM (Recomendável 16GB) , 256 hd ssd, Windows 10 - *{dadosCliente[0]}* -",
             f"Criação e verificação de conta na PagSeguro e verificação de segurança - *{dadosCliente[0]}* -",

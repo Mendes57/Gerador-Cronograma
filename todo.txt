@@ -1,0 +1,21 @@
+melhorar retorno de erros e retorno de links
+
+
+interface
+1- Gerar cronograma
+    Dados
+    Gera
+    Printa
+    espera enter para voltar ao menu
+
+2- Ler cronograma já existente
+    espera enter para voltar ao menu
+    0- Voltar
+
+3- Editar cronograma existente
+    1- Escolher cronograma
+        Imprimi cronograma
+        Pergunta qual ítem Editar
+    0- Voltar
+
+Melhorar opção de totens?
