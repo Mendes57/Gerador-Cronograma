@@ -40,9 +40,9 @@ def geraCrono(dadosCliente):
     elif dadosCliente[1] == 5: 
         if dadosCliente[3] == 1: m10_mut.clear(); linksm10_mut.clear(); del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", "")
         elif dadosCliente[3] == 2: pagseguro_mut.clear(); linkspagseguro_mut.clear(); del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", "")
-        else: return "Erro nos dados do totem"
+        else: return "Erro nos dados do totem PagSeguro ou M10"
     elif dadosCliente[1] == 6: del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", ""); pagseguro_mut[0][0] = pagseguro_mut[0][0].replace(" e Servidor", "");del pagseguro_mut[1][0]; del linkspagseguro_mut[1][2]
-    else: return "Erro nos dados do totem"
+    else: return "Erro nos dados da escolha do totem"
 
     
     if dadosCliente[4] == 1: pass

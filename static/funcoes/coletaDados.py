@@ -14,7 +14,7 @@ def coletaDados():
     
     nomeOutroTotem = input("\nDigite o nome do totem: ") if totem in {4, 5, 6} else ""
     
-    pagSeguroOuM10 = int(input("\nQual outro totem irá utilizar? \n1 - PagSeguro \n2 - M10 \nResposta: ")) if totem == 5 else ""
+    pagSeguroOuM10 = int(input("\nQual outro totem irá utilizar? \n1 - PagSeguro \n2 - M10 \nResposta: ")) if totem == 5 else 0
     clear()
     temApp = int(input("O cliente tem app? \n1 - Sim \n2 - Não \nResposta: "))
     clear()
