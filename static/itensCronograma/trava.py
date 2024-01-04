@@ -1,4 +1,4 @@
-from static.funcoes.coletaDados import dadosCliente
+from static.funcoes.coletaDadosEChecaErros import dadosCliente
 def trava():
     return [["*Trava de geladeira:*"],
             [f"Adquirir trava magnética - *{dadosCliente[0]}* -",

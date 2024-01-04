@@ -1,5 +1,6 @@
-from static.funcoes.coletaDados import coletaDados
-from static.funcoes.geraCrono import geraCrono
+from static.funcoes.coletaDadosEChecaErros import coletaDadosEChecaErros
 from static.funcoes.printaCrono import printaCrono
+from static.funcoes.geraCrono import geraCrono
 
-printaCrono(geraCrono(coletaDados()))
+
+printaCrono(geraCrono(coletaDadosEChecaErros()))

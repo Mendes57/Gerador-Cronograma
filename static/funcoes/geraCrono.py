@@ -14,7 +14,6 @@ from static.itensCronograma.dadosSitef import dadossitef
 from static.itensCronograma.outroTotem import outroTotem
 from static.itensCronograma.linksOutroTotem import linksOutroTotem
 
-ordem = []
 
 def geraCrono(dadosCliente):
     contrato_mut = contrato()
@@ -38,29 +37,23 @@ def geraCrono(dadosCliente):
     elif dadosCliente[1] == 3: del pagseguro_mut[1][0]; del linkspagseguro_mut[1][2]; pagseguro_mut[0][0] = pagseguro_mut[0][0].replace(" e Servidor", ""); del m10_mut[1][0]; del linksm10_mut[1][2]; m10_mut[0][0] = m10_mut[0][0].replace(" e Servidor", ""); outroTotem_mut.clear(); linksOutroTotem_mut.clear()
     elif dadosCliente[1] == 4: pagseguro_mut.clear(); linkspagseguro_mut.clear(); m10_mut.clear(); linksm10_mut.clear()
     elif dadosCliente[1] == 5: 
-        if dadosCliente[3] == 1: m10_mut.clear(); linksm10_mut.clear(); del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", "")
-        elif dadosCliente[3] == 2: pagseguro_mut.clear(); linkspagseguro_mut.clear(); del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", "")
-        else: return "Erro nos dados do totem PagSeguro ou M10"
+        if dadosCliente[2] == 1: m10_mut.clear(); linksm10_mut.clear(); del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", "")
+        elif dadosCliente[2] == 2: pagseguro_mut.clear(); linkspagseguro_mut.clear(); del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", "")
     elif dadosCliente[1] == 6: del outroTotem_mut[1][0]; del linksOutroTotem_mut[1][0]; outroTotem_mut[0][0] = outroTotem_mut[0][0].replace(" e Servidor", ""); pagseguro_mut[0][0] = pagseguro_mut[0][0].replace(" e Servidor", "");del pagseguro_mut[1][0]; del linkspagseguro_mut[1][2]
-    else: return "Erro nos dados da escolha do totem"
 
     
-    if dadosCliente[4] == 1: pass
-    elif dadosCliente[4] == 2: app_mut.clear(); del finalizacao_mut[1][2]
-    else: return "Erro nos dados do app"
+    if dadosCliente[3] == 1: pass
+    elif dadosCliente[3] == 2: app_mut.clear(); del finalizacao_mut[1][2]
 
+    if dadosCliente[4] == 1: 
+        if dadosCliente[4] == 2: del app_mut[1][0:2]
+    elif dadosCliente[4] == 2: app_mut.clear(); del finalizacao_mut[1][2]
+    
     if dadosCliente[5] == 1: pass
-    elif dadosCliente[5] == 2: del app_mut[1][0:2]
-    else: return "Erro nos dados da venda pelo app"
+    elif dadosCliente[5] == 2: del desenvolvimento_mut[1][2:4]
+    elif dadosCliente[5] == 3: del erp_mut[1][5]; del desenvolvimento_mut[1][2:4]
     
     if dadosCliente[6] == 1: pass
-    elif dadosCliente[6] == 2: del desenvolvimento_mut[1][2:4]
-    elif dadosCliente[6] == 3: del erp_mut[1][5]; del desenvolvimento_mut[1][2:4]
-    else: return "Erro nos dados da importação"
-    
-    if dadosCliente[7] == 1: pass
-    elif dadosCliente[7] == 2: trava_mut.clear(); linkstrava_mut.clear()
-    else: return "Erro nos dados da trava"
+    elif dadosCliente[6] == 2: trava_mut.clear(); linkstrava_mut.clear()
 
-    ordem.extend([contrato_mut, desenvolvimento_mut, sitef_mut, m10_mut, pagseguro_mut, outroTotem_mut, trava_mut, erp_mut, app_mut, finalizacao_mut, linksm10_mut, linkspagseguro_mut, linksOutroTotem_mut, linkstrava_mut, dadossitef_mut])
-    return ordem
+    return [contrato_mut, desenvolvimento_mut, sitef_mut, m10_mut, pagseguro_mut, outroTotem_mut, trava_mut, erp_mut, app_mut, finalizacao_mut, linksm10_mut, linkspagseguro_mut, linksOutroTotem_mut, linkstrava_mut, dadossitef_mut]

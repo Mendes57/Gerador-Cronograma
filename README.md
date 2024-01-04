@@ -12,7 +12,7 @@ Coleta e armazena os dados, Ajusta as listas de acordo com os dados do cliente e
 
 # Funções:
 
-## limpaTela
+## limpaTela:
 
 utiliza as bibliotecas "os" e "time" para a função de limpar o cmd, possui um delay de 0,1 segundos, um clear e mais um delay de 0,1s.
 

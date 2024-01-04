@@ -1,4 +1,4 @@
-from static.funcoes.coletaDados import dadosCliente
+from static.funcoes.coletaDadosEChecaErros import dadosCliente
 def sitef():
     return [["*SiTef:*"], 
             [f"Contratação da Operadora de Cartões (Abaixo do cronograma) - *{dadosCliente[0]}* - ",

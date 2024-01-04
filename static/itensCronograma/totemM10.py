@@ -1,4 +1,4 @@
-from static.funcoes.coletaDados import dadosCliente
+from static.funcoes.coletaDadosEChecaErros import dadosCliente
 def totemM10():
     return [["*Totem M10 e Servidor:*"],
             [f"Adquirir Servidor - Configuração mínima: Intel core i5 8ª geração, 8GB RAM (Recomendável 16GB) , 256 hd ssd, Windows 10 - *{dadosCliente[0]}* -",

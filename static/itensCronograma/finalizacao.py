@@ -1,4 +1,4 @@
-from static.funcoes.coletaDados import dadosCliente
+from static.funcoes.coletaDadosEChecaErros import dadosCliente
 
 def finalizacao():
     return [["*Finalzação:*"],
@@ -7,5 +7,5 @@ def finalizacao():
             f"QR Code para acessar loja pelo app - ACCESYS - ",
             f"Agendar data para treinamento geral (Mais longo mas contem todos os módulos) ou somente de manutenção de produtos (Mostra somente como cadastrar e editar produtos, inauguração rápida da loja, requer treinamento geral pós inauguração) - ACCESYS e *{dadosCliente[0]}* - ",
             f"Preparação para Go Live (Teste de leitura dos produtos, verificar precificação e teste de vendas) - *{dadosCliente[0]}* - ",
-            f"Go Live da primeira loja (Data da inauguração) - ACCESYS e *{dadosCliente[0]}* - "]
+            f"Inauguração da primeira loja - ACCESYS e *{dadosCliente[0]}* - "]
             ]
