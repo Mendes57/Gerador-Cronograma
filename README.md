@@ -18,20 +18,20 @@ utiliza as bibliotecas "os" e "time" para a função de limpar o cmd, possui um 
 
 ## coletaDados:
 
-Coleta os dados do cliente que vamos usar para gerar o cronograma, os mesmos são armazenados em uma lista com as variáveis:
+Coleta os dados do cliente que vamos usar para gerar o cronograma, checa se os dados possuem algum erro com a função checaErros() e os dados são armazenados em uma lista com as variáveis:
 
-nomeLoja, totem, nomeOutroTotem, pagSeguroOuM10, temApp, temVendaApp, temImportacao, temTrava
+nomeLoja, totem, pagSeguroOuM10, temApp, temVendaApp, temImportacao, temTrava
+
+## checaErros:
+
+Verifica se possui algum erro nos valores atribuidos as variaveis, printa mensagem de erro, indicando a variável errada e para a execução do programa, se não encontrar erros retorna o valor inserido
 
 ## geraCronograma:
 
-Esses dados são passados para o gerador de cronograma onde ele formata as listas, zerando ou retirandos certos ítens para evitar ambiguidade, retornando e armazenando uma lista com as variáveis:
+Os dados do cliente já verificados são passados para o gerador de cronograma onde ele formata as listas, zerando ou retirandos certos ítens para evitar ambiguidade, retornando e armazenando uma lista com as variáveis:
 
 contrato_mut, desenvolvimento_mut, sitef_mut, m10_mut, pagseguro_mut, outroTotem_mut, trava_mut, erp_mut, app_mut, finalizacao_mut, linksm10_mut, linkspagseguro_mut, linksOutroTotem_mut, linkstrava_mut, dadossitef_mut
 
-retorna mensagem de erro se for encontrado
-
 ## printaCrono:
 
-Após isso, a lista com a junção de todos os ítens do cronograma formatados é passada para a função de imprimir, que imprime na tela todos os ítens recebidos.
-
-printa o erro se existir
+Após isso, a lista com a junção de todos os ítens do cronograma formatados é passada para a função printaCrono, que imprime na tela todos os ítens recebidos.

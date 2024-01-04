@@ -1,33 +1,24 @@
-#
-# coleta dos dados do cliente e armazenamento na variavel dadosCliente
-# Serão perguntados aqui
-#
 from static.funcoes.delayEClear import clear
 from static.funcoes.checaErros import checaErros
 
+dadosCliente = []
 
 def coletaDadosEChecaErros():
     clear()
-    nomeLoja = input("Digite o nome do cliente: ")
-    checaErros(nomeLoja)
+    nomeLoja = checaErros(input("Digite o nome do cliente: "))
     clear()
-    totem = input("Que totem vai utilizar? \n1 - Totem M10 \n2 - Totem agSeguro \n3 - PagSeguro e M10 \n4 - Totem com raspberry pi \n5 - Totem com raspberry pi e PagSeguro ou M10 \n6 - Todas as opções \nResposta: ")
-    checaErros(totem)
+    totem = checaErros(input("Que totem vai utilizar? \n1 - Totem M10 \n2 - Totem agSeguro \n3 - PagSeguro e M10 \n4 - Totem com raspberry pi \n5 - Totem com raspberry pi e PagSeguro ou M10 \n6 - Todas as opções \nResposta: "))
     
-    pagSeguroOuM10 = input("\nQual outro totem irá utilizar? \n1 - PagSeguro \n2 - M10 \nResposta: "); checaErros(pagSeguroOuM10) if totem == 5 else 0
+    pagSeguroOuM10 = checaErros(input("\nQual outro totem irá utilizar?\n1 - PagSeguro\n2 - M10\nResposta: ")) if totem == "3" else "0"
     clear()
-    temApp = input("O cliente tem app? \n1 - Sim \n2 - Não \nResposta: ")
-    checaErros(temApp)
+    temApp = checaErros(input("O cliente tem app? \n1 - Sim \n2 - Não \nResposta: "))
     clear()
-    temVendaApp = input("O cliente vai vender pelo app? \n1 - Sim \n2 - Não \nResposta: ") if temApp == 1 else 2
-    checaErros(temVendaApp)
+    temVendaApp = checaErros(input("O cliente vai vender pelo app? \n1 - Sim \n2 - Não \nResposta: ") if temApp == "1" else "2")
     clear()
-    temImportacao = input('Vai ter importação de produtos? \n1 - Base deles \n2 - Nossa base \n3 - não vai ter \nResposta: ')
-    checaErros(temImportacao)
+    temImportacao = checaErros(input('Vai ter importação de produtos? \n1 - Base deles \n2 - Nossa base \n3 - não vai ter \nResposta: '))
     clear()
-    temTrava = input('Vai utilizar trava de geladeira? \n1 - Sim \n2 - Não \nResposta: ')
-    checaErros(temTrava)
+    temTrava = checaErros(input('Vai utilizar trava de geladeira? \n1 - Sim \n2 - Não \nResposta: '))
     clear() 
 
-
-    return [nomeLoja, int(totem), int(pagSeguroOuM10), int(temApp), int(temVendaApp), int(temImportacao), int(temTrava)]
+    dadosCliente.extend([nomeLoja, int(totem), int(pagSeguroOuM10), int(temApp), int(temVendaApp), int(temImportacao), int(temTrava)])
+    return dadosCliente

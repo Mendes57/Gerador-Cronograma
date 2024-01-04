@@ -1,3 +1,6 @@
 def checaErros(variavel):
     if variavel == "":
-        print("Erro ao inserir dados, por favor, tente novamente")
+        print(f"\nErro ao inserir dados, por favor, tente novamente\nErro: {variavel}\n\n")
+        exit()
+    else:
+        return variavel
