@@ -7,7 +7,7 @@ def coletaDadosEChecaErros():
     clear()
     nomeLoja = checaErros(input("Digite o nome do cliente: "))
     clear()
-    totem = checaErros(input("Que totem vai utilizar? \n1 - Totem M10 \n2 - Totem agSeguro \n3 - PagSeguro e M10 \n4 - Totem com raspberry pi \n5 - Totem com raspberry pi e PagSeguro ou M10 \n6 - Todas as opções \nResposta: "))
+    totem = checaErros(input("Que totem vai utilizar? \n1 - Totem M10 \n2 - Totem PagSeguro \n3 - PagSeguro e M10 \n4 - Totem com raspberry pi \n5 - Totem com raspberry pi e PagSeguro ou M10 \n6 - Todas as opções \nResposta: "))
     
     pagSeguroOuM10 = checaErros(input("\nQual outro totem irá utilizar?\n1 - PagSeguro\n2 - M10\nResposta: ")) if totem == "3" else "0"
     clear()
