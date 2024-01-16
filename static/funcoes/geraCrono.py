@@ -2,7 +2,7 @@ from static.itensCronograma.erp import erp
 from static.itensCronograma.app import app
 from static.itensCronograma.trava import trava
 from static.itensCronograma.sitef import sitef
-from static.itensCronograma.linksM10 import linksm10
+from static.itensCronograma.linksM10 import linksM10
 from static.itensCronograma.totemM10 import totemM10
 from static.itensCronograma.contrato import contrato
 from static.itensCronograma.desenvolvimento import desenvolvimento
@@ -25,7 +25,7 @@ def geraCrono(dadosCliente):
     erp_mut = erp()
     app_mut = app()
     finalizacao_mut = finalizacao()
-    linksm10_mut = linksm10()
+    linksm10_mut = linksM10()
     linkspagseguro_mut = linkspagseguro()
     linkstrava_mut = linkstrava()
     dadossitef_mut = dadossitef()
