@@ -1,4 +1,4 @@
-def linksm10():
+def linksM10():
     return [["*_Links totem M10:_*"],
 ["""Elgin Bematech M10:
 https://produto.mercadolivre.com.br/MLB-2039561157-pdv-android-cimpressora-auto-atendimento-m10-elgin-bematech-_JM#position=3&search_layout=stack&type=item&tracking_id=e86f182b-70ac-41fc-92e3-808a87236cc8
